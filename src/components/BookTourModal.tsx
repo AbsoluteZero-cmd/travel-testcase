@@ -1,4 +1,4 @@
-import { Button, Form, Input, message, Typography } from "antd";
+import { Button, Form, Input, message, Typography, type FormInstance } from "antd";
 
 import { useAppDispatch, useAppSelector } from "../store/hooks";
 
@@ -14,13 +14,13 @@ type FieldType = {
 
 const { Title } = Typography;
 
-const BookTourModal = () => {
+const BookTourModal: React.FC = () => {
 
     const dispatch = useAppDispatch();
     const tourID = useAppSelector(state => state.bookTourModal.tourID);
     const tourName = useAppSelector(state => state.bookTourModal.tourName);
 
-    const [form] = Form.useForm()
+    const [form]:[FormInstance] = Form.useForm()
 
     return (<>
         <Form
@@ -45,7 +45,7 @@ const BookTourModal = () => {
 
                 message.success('Заявка отправлена!')
                 
-                console.log('Заявка отправлена!')
+                // console.log('Заявка отправлена!')
 
                 dispatch(closeModal())
 

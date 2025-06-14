@@ -2,12 +2,12 @@ import { tourCards } from "../sample_data";
 
 import TourCard from "./TourCard";
 
-const BookTourList = () => {
+const BookTourList: React.FC = () => {
     return (
         <div style={{ display: "flex", flexWrap: "wrap" }}>
-            {tourCards.map((tourCard) => (
+            {tourCards.map((tour) => (
                 <div style={{ margin: '5px' }}>
-                <TourCard key={tourCard.tourID} tourID={tourCard.tourID} tourName={tourCard.tourName} />
+                <TourCard key={tour.tourID} tour={tour} />
                 </div>
             ))}
       </div>

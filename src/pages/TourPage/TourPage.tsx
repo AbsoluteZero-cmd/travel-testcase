@@ -1,10 +1,13 @@
 import { Modal, Typography } from "antd";
-import BookTourList from "../components/BookTourList";
-import { useAppDispatch, useAppSelector } from "../store/hooks";
-import BookTourModal from "../components/BookTourModal";
-import { closeModal } from "../store/features/bookTour/bookTourModalSlice";
 
-const TourPage = () => {
+import BookTourList from "../../components/BookTourList";
+import BookTourModal from "../../components/BookTourModal";
+
+import { useAppDispatch, useAppSelector } from "../../store/hooks";
+
+import { closeModal } from "../../store/features/bookTour/bookTourModalSlice";
+
+const TourPage: React.FC = () => {
     const dispatch = useAppDispatch();
     const isModalOpen = useAppSelector((state) => state.bookTourModal.isModalOpen);
 
