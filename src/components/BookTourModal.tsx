@@ -47,8 +47,6 @@ const BookTourModal: React.FC = () => {
                 }))
 
                 messageApi.success('Заявка отправлена!')
-                
-                // console.log('Заявка отправлена!')
 
                 dispatch(closeModal())
 
