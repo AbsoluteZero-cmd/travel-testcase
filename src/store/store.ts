@@ -1,4 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
+
 import bookTourReducer from './features/bookTour/bookTourSlice';
 import bookTourModalReducer from './features/bookTour/bookTourModalSlice';
 
