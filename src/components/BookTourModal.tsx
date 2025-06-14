@@ -22,7 +22,10 @@ const BookTourModal: React.FC = () => {
 
     const [form]:[FormInstance] = Form.useForm()
 
+    const [messageApi, contextHolder] = message.useMessage();
+
     return (<>
+        {contextHolder}
         <Form
             form={form}
 
@@ -43,7 +46,7 @@ const BookTourModal: React.FC = () => {
                     userPhone: values.phone!,
                 }))
 
-                message.success('Заявка отправлена!')
+                messageApi.success('Заявка отправлена!')
                 
                 // console.log('Заявка отправлена!')
 
